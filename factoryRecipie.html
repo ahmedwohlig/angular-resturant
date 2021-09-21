@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,25 +7,28 @@
     <title>RandomRec</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body ng-app="RandomRecipie" ng-controller="Random">
+  <body ng-app="RandomRecipie" ng-controller="SearchRe">
     <!-- {{ search() }} -->
-    <button ng-click="search()">hello`</button>
-    <div ng-repeat="tasks in recipie">
+    {{ respdata() }}
+    <button ng-click="respdata()">hello`</button>
+    <div ng-repeat="tasks in reci">
       <img src="{{tasks.image}}" alt="meal" style="height: 50vh; width: 100%" />
       <div class="recipie-container">
         <h1>{{ tasks.title }}</h1>
         <strong>Ingredients:</strong><br /><br />
         <span ng-repeat="ingredient in tasks.ingredients"
-          >{{ ingredient }}, </span
-        ><br /><br />
+          >{{ ingredient }},
+        </span>
+        <br /><br />
         <strong>Steps:</strong>
         <ol>
           <li ng-repeat="howto in tasks.instructions">{{ howto.text }}</li>
         </ol>
       </div>
     </div>
-    <a href="./factoryRecipie.html">factory recipie</a>
-    <script src="./Angular.js"></script>
-    <script src="./httpCall.js"></script>
+
+    <script src="Angular.js"></script>
+    <script src="httpCall.js"></script>
+    <script src="searchRandomRecipie.js"></script>
   </body>
 </html>

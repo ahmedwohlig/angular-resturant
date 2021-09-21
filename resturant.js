@@ -1,3 +1,5 @@
+/// <reference path="Angular.js" />
+
 (function(angular) {
     var myApp = angular.module('resturant', []);
     myApp.controller('RestoCon', ['$scope', function($scope) {
